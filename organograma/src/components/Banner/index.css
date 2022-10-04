@@ -1,8 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .banner {
     background: #6278F7;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 .banner__img {
