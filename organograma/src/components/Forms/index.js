@@ -1,5 +1,7 @@
 import './index.css'
 import CampoTexto from '../CampoTexto/index';
+import ListaSuspensa from '../ListaSuspensa/index';
+import times from '../../utils/time';
 
 export default function Forms() {
   
@@ -19,6 +21,11 @@ export default function Forms() {
                 label="Imagem"
                 placeholder="Cole a URL da imagem"
             />
+            <ListaSuspensa 
+                label="Time"
+                itens={times}
+            />
+
             
         </form>
     </section>
