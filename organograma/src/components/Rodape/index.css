@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.rodape {
+    background: #6278F7;
+    color: #FFF;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape .logos {
+    display: inline-block;
+    margin-right: 32px;
+}

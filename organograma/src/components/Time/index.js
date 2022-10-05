@@ -1,5 +1,6 @@
 import './index.css'
 import Card from '../Card'
+import Botao from '../Botao/index';
 
 
 export default function Time({nome, corPrimaria, corSecundaria, card}) {
@@ -26,6 +27,11 @@ export default function Time({nome, corPrimaria, corSecundaria, card}) {
                     cargo={colaborador.cargo}
                 />)}
             </div>
+            <Botao
+                onClick= { () => localStorage.clear() }
+            >
+                Limpar os Cards
+            </Botao>
         </section>)
     )
 }

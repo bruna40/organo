@@ -2,6 +2,7 @@ import {useState} from 'react';
 import Banner from "./components/Banner";
 import Forms from "./components/Forms";
 import Time from "./components/Time";
+import Rodape from "./components/Rodape";
 import { timesCard } from "./utils/time";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     console.log('Clicou no botão =>', colaborador);
     setColaboradores([...colaboradores, colaborador]);
   }
+  
   return (
     <>
       <Banner />
@@ -30,6 +32,7 @@ function App() {
                 card={colaboradores.filter(colaborador => colaborador.time === time.nome)}
               />)
       }
+      <Rodape />
 
     </>
 

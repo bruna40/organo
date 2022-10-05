@@ -3,6 +3,7 @@ import './index.css'
 import CampoTexto from '../CampoTexto/index';
 import ListaSuspensa from '../ListaSuspensa/index';
 import Botao from '../Botao/index';
+import { setCardInLocalStorage } from '../../services/localStorage';
 
 export default function Forms({ onSubmit, times }) {
     const [nome, setNome] = useState('');
@@ -20,6 +21,12 @@ export default function Forms({ onSubmit, times }) {
             cargo:cargo
      
         });
+        setNome('');
+        setImagem('');
+        setCargo('');
+        setTime('');
+        setCardInLocalStorage('Card');
+        
     }
   
   return (
