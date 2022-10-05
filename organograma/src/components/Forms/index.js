@@ -5,7 +5,7 @@ import ListaSuspensa from '../ListaSuspensa/index';
 import times from '../../utils/time';
 import Botao from '../Botao/index';
 
-export default function Forms() {
+export default function Forms(props) {
     const [nome, setNome] = useState('');
     const [imagem, setImagem] = useState('');
     const [cargo, setCargo] = useState('');
@@ -14,8 +14,13 @@ export default function Forms() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Clicou no botão =>', nome, imagem, cargo, time);
-
+        props.onSubmit({
+            nome:nome,
+            time:time,
+            imagem:imagem,
+            cargo:cargo
+     
+        });
     }
   
   return (
@@ -30,15 +35,15 @@ export default function Forms() {
                 placeholder="Digite seu nome"
             />
             <CampoTexto
-                value={imagem}
-                onChange={valor => setImagem(valor)}
+                value={cargo}
+                onChange={valor => setCargo(valor)}
                 required={true}
                 label="Cargo"
                 placeholder="Digite seu cargo"
             />
             <CampoTexto
-                value={cargo}
-                onChange={valor => setCargo(valor)}
+                value={imagem}
+                onChange={valor => setImagem(valor)}
                 required={true}
                 label="Imagem"
                 placeholder="Cole a URL da imagem"
