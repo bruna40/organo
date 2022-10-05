@@ -1,12 +1,20 @@
 import './index.css'
 
 export default function CampoTexto(props) {
-    console.log(props)
+    const handleChange = (event) => {
+        props.onChange(event.target.value);
+        console.log(event.target.value)
+    }
     return(
 
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input  placeholder={props.placeholder}/>
+            <input  
+                value={props.value}
+                onChange={handleChange}
+                required={props.required}
+                placeholder={props.placeholder}
+            />
         </div>
 
     )
