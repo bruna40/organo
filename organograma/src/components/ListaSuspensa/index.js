@@ -1,17 +1,17 @@
 import './index.css';
 
-export default function ListaSuspensa(props) { 
+export default function ListaSuspensa({label, required, value, onChange, itens})  { 
 
     return(
         <div className="lista-suspensa">
-            <label>{props.label}</label>
+            <label>{label}</label>
             <select
-                required={props.required}
-                value={props.value}
-                onChange={evento => props.onChange(evento.target.value) }
+                required={required}
+                value={value}
+                onChange={evento => onChange(evento.target.value) }
             >
                 {
-                    props.itens.map((item) => {
+                    itens.map((item) => {
                         return <option key={item}>{item}</option>
                     })
                 }

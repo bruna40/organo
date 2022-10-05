@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './index.css'
 import CampoTexto from '../CampoTexto/index';
 import ListaSuspensa from '../ListaSuspensa/index';
-import times from '../../utils/time';
+import{ times } from '../../utils/time';
 import Botao from '../Botao/index';
 
-export default function Forms(props) {
+export default function Forms({ onSubmit }) {
     const [nome, setNome] = useState('');
     const [imagem, setImagem] = useState('');
     const [cargo, setCargo] = useState('');
@@ -14,7 +14,7 @@ export default function Forms(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.onSubmit({
+        onSubmit({
             nome:nome,
             time:time,
             imagem:imagem,

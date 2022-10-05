@@ -1,7 +1,7 @@
 import './index.css'
 
-export default function Botao(props) {
+export default function Botao({children}) {
     return(
-        <button className="botao">{props.children}</button>
+        <button className="botao">{children}</button>
     )
 }
