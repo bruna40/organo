@@ -15,6 +15,7 @@ function App() {
     <>
       <Banner />
       <Forms
+        times={ timesCard.map(times => times.nome) }
         onSubmit={colaborador => handleSubmit(colaborador)}
       />
       {
@@ -26,6 +27,7 @@ function App() {
                 nome={time.nome}
                 corPrimaria={time.corPrimaria} 
                 corSecundaria={time.corSecundaria}
+                card={colaboradores.filter(colaborador => colaborador.time === time.nome)}
               />)
       }
 

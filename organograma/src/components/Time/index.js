@@ -1,7 +1,11 @@
 import './index.css'
-export default function Time({nome, corPrimaria, corSecundaria}) {
+import Card from '../Card'
+
+
+export default function Time({nome, corPrimaria, corSecundaria, card}) {
     return(
-        <section
+        card.length > 0 && 
+        (<section
             className="time"
             style={
                 {backgroundColor: corSecundaria }
@@ -15,6 +19,13 @@ export default function Time({nome, corPrimaria, corSecundaria}) {
             >
                 {nome}
             </h3>
-        </section>
+            <div className="card">
+                {card.map((colaborador) =>  <Card 
+                    imagem={colaborador.imagem}
+                    nome={colaborador.nome}
+                    cargo={colaborador.cargo}
+                />)}
+            </div>
+        </section>)
     )
 }

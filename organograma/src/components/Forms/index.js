@@ -2,10 +2,9 @@ import { useState } from 'react';
 import './index.css'
 import CampoTexto from '../CampoTexto/index';
 import ListaSuspensa from '../ListaSuspensa/index';
-import{ times } from '../../utils/time';
 import Botao from '../Botao/index';
 
-export default function Forms({ onSubmit }) {
+export default function Forms({ onSubmit, times }) {
     const [nome, setNome] = useState('');
     const [imagem, setImagem] = useState('');
     const [cargo, setCargo] = useState('');
